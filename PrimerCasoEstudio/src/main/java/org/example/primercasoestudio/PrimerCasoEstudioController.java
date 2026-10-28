@@ -1,19 +1,18 @@
 package org.example.primercasoestudio;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
 
 public class PrimerCasoEstudioController {
 
-    @FXML
-    private TextArea txtEntradas;
-    @FXML
-    private Label lblDisponibles;
-    @FXML
-    private Label lblReservadas;
-    @FXML
-    private Label lblRechazadas;
 
 
+
+
+    public void iniciarSimulacion(ActionEvent actionEvent) {
+    }
 }
