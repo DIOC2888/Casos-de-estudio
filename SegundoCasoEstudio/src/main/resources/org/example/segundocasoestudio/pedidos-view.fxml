@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="360" prefWidth="520" spacing="20" style="-fx-background-color: #F4F6F9;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.segundocasoestudio.PedidosController">
+
+    <padding>
+        <Insets bottom="30" left="35" right="35" top="30" />
+    </padding>
+
+    <Label style="-fx-font-size: 23px; -fx-font-weight: bold; -fx-text-fill: #263238;" text="Procesamiento de pedidos" />
+
+    <Label style="-fx-font-size: 13px; -fx-text-fill: #607D8B;" text="Simulación de 30 pedidos en segundo plano" />
+
+    <VBox alignment="CENTER_LEFT" spacing="8">
+        <HBox alignment="CENTER_LEFT" spacing="8">
+            <Label style="-fx-font-size: 14px; -fx-font-weight: bold;" text="Estado:" />
+
+            <Label fx:id="lblEstado" style="-fx-font-size: 14px; -fx-text-fill: #1976D2;" />
+        </HBox>
+
+        <ProgressBar fx:id="prgBarraProgreso" maxWidth="Infinity" prefHeight="22" progress="0" />
+
+        <HBox alignment="CENTER">
+            <Label fx:id="lblContador" style="-fx-font-size: 15px; -fx-font-weight: bold;" text="Pedidos completados: " />
+        </HBox>
+    </VBox>
+
+    <HBox alignment="CENTER" spacing="15">
+        <Button fx:id="btnIniciar" onAction="#iniciarProcesamiento" prefHeight="40" prefWidth="130" style="-fx-background-color: #1976D2; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 8;" text="Iniciar" />
+
+        <Button fx:id="btnCancelar" disable="true" onAction="#cancelarProcesamiento" prefHeight="40" prefWidth="130" style="-fx-background-color: #D32F2F; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 8;" text="Cancelar" />
+    </HBox>
+
+    <Label style="-fx-font-size: 12px; -fx-text-fill: #78909C;" text="Cada pedido tarda aproximadamente 200 ms." />
+
+</VBox>
