@@ -18,11 +18,11 @@
         </VBox>
         <VBox spacing="5" style="-fx-border-color: gray; -fx-padding: 10;">
             <Label text="Confirmadas" />
-            <Label fx:id="lblConfirmadas" style="-fx-font-size: 28px; -fx-font-weight: bold;" text="0" />
+            <Label fx:id="lblConfirmadas" style="-fx-font-size: 28px; -fx-font-weight: bold;" text="0" textFill="#0fc712" />
         </VBox>
         <VBox spacing="5" style="-fx-border-color: gray; -fx-padding: 10;">
             <Label text="Rechazadas" />
-            <Label fx:id="lblRechazadas" style="-fx-font-size: 28px; -fx-font-weight: bold;" text="0" />
+            <Label fx:id="lblRechazadas" style="-fx-font-size: 28px; -fx-font-weight: bold;" text="0" textFill="#ef1010" />
         </VBox>
 
     </HBox>

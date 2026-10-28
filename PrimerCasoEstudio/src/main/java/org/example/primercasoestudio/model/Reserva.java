@@ -1,34 +1,39 @@
+
 package org.example.primercasoestudio.model;
 
 public class Reserva {
+
     private int cantRechazadas = 0;
     private int cantReservadas = 0;
     private int cantDisponibles = 20;
 
+    public synchronized String registrarReserva(String agente) {
 
+        String mensaje;
 
-    public synchronized void registrarReserva(String agente){
+        if (cantDisponibles > 0) {
+            cantReservadas++;
+            cantDisponibles--;
+            mensaje = agente + " vendió una entrada";
 
-        if(cantReservadas>=cantDisponibles){
-            cantReservadas ++;
-            cantDisponibles --;
-            System.out.println(agente + " vendio una entrada ");
+        } else {
+            cantRechazadas++;
+            mensaje = agente + " rechazó una reserva";
         }
-       else if (cantReservadas > 20) {
-                cantRechazadas++;
-            System.out.println(agente + " rechazo una entrada por entradas no disponible." );
-            }
 
+        System.out.println(mensaje);
+        return mensaje;
     }
-    public int getCantDisponibles() {
+
+    public synchronized int getCantDisponibles() {
         return cantDisponibles;
     }
 
-    public int getCantReservadas() {
+    public synchronized int getCantReservadas() {
         return cantReservadas;
     }
 
-    public int getCantRechazadas() {
+    public synchronized int getCantRechazadas() {
         return cantRechazadas;
     }
 }
