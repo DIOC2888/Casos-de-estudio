@@ -1,0 +1,134 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.example.tercercasoestudio.CajaVentasController"
+      alignment="TOP_CENTER"
+      spacing="20"
+      prefWidth="650"
+      prefHeight="600"
+      style="-fx-background-color: #F4F6F9;">
+
+    <padding>
+        <Insets top="25" right="30" bottom="25" left="30"/>
+    </padding>
+
+    <!-- TITULO -->
+    <Label text="CAJA DE VENTAS CONCURRENTES"
+           style="-fx-font-size: 22px;
+                  -fx-font-weight: bold;"/>
+
+    <Label text="Simulación de tres vendedores"
+           style="-fx-font-size: 14px;"/>
+
+    <!-- BOTONES -->
+    <HBox alignment="CENTER" spacing="15">
+
+        <Button fx:id="btnIniciar"
+                text="Iniciar ventas"
+                onAction="#iniciarVentas"
+                prefWidth="150"
+                prefHeight="40"/>
+
+        <Button fx:id="btnCancelar"
+                text="Cancelar ventas"
+                onAction="#cancelarVentas"
+                disable="true"
+                prefWidth="150"
+                prefHeight="40"/>
+
+    </HBox>
+
+
+    <VBox spacing="15"
+          style="-fx-background-color: white;
+                 -fx-padding: 20;
+                 -fx-background-radius: 10;">
+
+        <Label text="Progreso de vendedores"
+               style="-fx-font-size: 17px;
+                      -fx-font-weight: bold;"/>
+
+
+        <Label text="Vendedor 1"/>
+
+        <HBox alignment="CENTER_LEFT" spacing="15">
+            <ProgressBar fx:id="barraVendedor1"
+                         progress="0"
+                         prefWidth="400"/>
+
+            <Label fx:id="lblVendedor1"
+                   text="0 / 5"/>
+        </HBox>
+
+
+        <Label text="Vendedor 2"/>
+
+        <HBox alignment="CENTER_LEFT" spacing="15">
+            <ProgressBar fx:id="barraVendedor2"
+                         progress="0"
+                         prefWidth="400"/>
+
+            <Label fx:id="lblVendedor2"
+                   text="0 / 5"/>
+        </HBox>
+
+
+        <Label text="Vendedor 3"/>
+
+        <HBox alignment="CENTER_LEFT" spacing="15">
+            <ProgressBar fx:id="barraVendedor3"
+                         progress="0"
+                         prefWidth="400"/>
+
+            <Label fx:id="lblVendedor3"
+                   text="0 / 5"/>
+        </HBox>
+
+    </VBox>
+
+    <VBox alignment="CENTER" spacing="10"
+          style="-fx-background-color: white;
+                 -fx-padding: 20;
+                 -fx-background-radius: 10;">
+
+        <Label text="Resumen de ventas"
+               style="-fx-font-size: 17px;
+                      -fx-font-weight: bold;"/>
+
+        <HBox alignment="CENTER" spacing="10">
+            <Label text="Total de ventas:"/>
+            <Label fx:id="lblTotalVentas"
+                   text="0"/>
+        </HBox>
+
+        <HBox alignment="CENTER" spacing="10">
+            <Label text="Recaudación total:"/>
+            <Label fx:id="lblRecaudacion"
+                   text="C$ 0"/>
+        </HBox>
+
+        <HBox alignment="CENTER" spacing="10">
+            <Label text="Estado:"/>
+            <Label fx:id="lblEstado"
+                   text="Sin iniciar"/>
+        </HBox>
+
+    </VBox>
+
+
+    <Label text="Registro de ventas"
+           style="-fx-font-size: 16px;
+                  -fx-font-weight: bold;"/>
+
+    <TextArea fx:id="txtRegistro"
+              editable="false"
+              wrapText="true"
+              prefHeight="150"
+              promptText="Aquí aparecerán las ventas realizadas..."/>
+
+</VBox>

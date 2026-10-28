@@ -12,7 +12,7 @@ public class PrimerCasoEstudioApplication extends Application {
     public void start(Stage stage) throws Exception {
         FXMLLoader fxmlLoader = new FXMLLoader(PrimerCasoEstudioApplication.class.getResource("/org/example/primercasoestudio/CasoEstudio1.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        stage.setTitle("Papeleria");
+        stage.setTitle("Reservacion");
         stage.setScene(scene);
         stage.show();
     }
