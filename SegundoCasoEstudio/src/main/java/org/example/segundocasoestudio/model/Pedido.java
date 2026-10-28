@@ -6,19 +6,24 @@ public class Pedido {
 
 
     public synchronized String realizarPedidos(String agente) {
-        estado = "Listo";
-        if (contadorPedidos < 30){
-            estado = "En ejecución";
-            contadorPedidos++;
-
+        if (contadorPedidos >= 30) {
+            estado = "Completado";
+            return agente + ": " + estado
+                    + " (" + contadorPedidos + "/30)";
         }
 
-        else {
+        estado = "En ejecución";
+        contadorPedidos++;
+
+        if (contadorPedidos == 30) {
             estado = "Completado";
         }
 
-        System.out.println(estado);
-        return estado;
+        System.out.println(agente + ": " + estado
+                + " (" + contadorPedidos + "/30)");
+
+        return agente + ": " + estado
+                + " (" + contadorPedidos + "/30)";
 
 
     }

@@ -133,6 +133,7 @@ public class PedidosController {
                         timeline.stop();
 
                         if (cancelacionSolicitada) {
+                            lblEstado.setText("Cancelando");
                             lblEstado.setText("Cancelado");
 
                         } else if (errorDetectado) {
