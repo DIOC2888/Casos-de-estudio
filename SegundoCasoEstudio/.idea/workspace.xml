@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e2c290e-0c11-42c1-970a-f7607eae7264" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../PrimerCasoEstudio/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/segundocasoestudio/PedidosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/segundocasoestudio/PedidosController.java" afterDir="false" />
-    </list>
+    <list default="true" id="7e2c290e-0c11-42c1-970a-f7607eae7264" name="Changes" comment="Documentaciones" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -90,11 +86,24 @@
       <option name="presentableId" value="Default" />
       <updated>1793147383745</updated>
       <workItem from="1793230369863" duration="194000" />
-      <workItem from="1793251753361" duration="1830000" />
+      <workItem from="1793251753361" duration="1853000" />
     </task>
+    <task id="LOCAL-00001" summary="Documentaciones">
+      <option name="closed" value="true" />
+      <created>1793261260542</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1793261260542</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Documentaciones" />
+    <option name="LAST_COMMIT_MESSAGE" value="Documentaciones" />
   </component>
 </project>
