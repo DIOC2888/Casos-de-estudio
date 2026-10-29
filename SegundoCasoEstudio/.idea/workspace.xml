@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e2c290e-0c11-42c1-970a-f7607eae7264" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../TercerCasoEstudio/src/main/java/org/example/tercercasoestudio/Caja.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PrimerCasoEstudio/src/main/java/org/example/primercasoestudio/PrimerCasoEstudioApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PrimerCasoEstudio/src/main/java/org/example/primercasoestudio/PrimerCasoEstudioApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TercerCasoEstudio/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../TercerCasoEstudio/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PrimerCasoEstudio/src/main/java/org/example/primercasoestudio/PrimerCasoEstudioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PrimerCasoEstudio/src/main/java/org/example/primercasoestudio/PrimerCasoEstudioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/segundocasoestudio/HelloApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/segundocasoestudio/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/segundocasoestudio/Launcher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TercerCasoEstudio/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../TercerCasoEstudio/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,23 +18,23 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="13" />
+    <option name="cachedIndexableFilesCount" value="21" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "DIOC2888"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;DIOC2888&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/DIOC2888/Casos-de-estudio.git",
-    "accountId": "110400e4-fe38-4c13-8a73-8f9a57e70d03"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/DIOC2888/Casos-de-estudio.git&quot;,
+    &quot;accountId&quot;: &quot;110400e4-fe38-4c13-8a73-8f9a57e70d03&quot;
   }
-}]]></component>
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -67,6 +69,10 @@
     "git-widget-placeholder": "main",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
   }
@@ -87,6 +93,7 @@
       <option name="presentableId" value="Default" />
       <updated>1793147383745</updated>
       <workItem from="1793230369863" duration="194000" />
+      <workItem from="1793251753361" duration="667000" />
     </task>
     <servers />
   </component>
