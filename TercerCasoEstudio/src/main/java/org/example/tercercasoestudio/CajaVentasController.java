@@ -111,17 +111,12 @@ public class CajaVentasController {
             timeline.stop();
         }
 
-        // Actualizar la interfaz cada 100 ms.
-        timeline = new Timeline(
-                new KeyFrame(Duration.millis(100), e -> {
 
+        timeline = new Timeline(new KeyFrame(Duration.millis(100), e -> {
                     Caja.ResumenVenta resumen;
-
                     // Leer todos los datos de forma protegida.
                     synchronized (caja) {
-
                         String mensaje;
-
                         while ((mensaje = mensajes.poll()) != null) {
                             txtRegistro.appendText(mensaje + "\n");
                         }
@@ -136,28 +131,19 @@ public class CajaVentasController {
                         barraVendedor2.setProgress(ventasVendedores[1] / 5.0);
                         barraVendedor3.setProgress(ventasVendedores[2] / 5.0);
 
-                        lblTotalVentas.setText(
-                                "" + resumen.getCantidadVentas()
-                        );
+                        lblTotalVentas.setText("" + resumen.getCantidadVentas());
 
-                        lblRecaudacion.setText(
-                                "C$ " + resumen.getTotalRecaudado()
-                        );
+                        lblRecaudacion.setText("C$ " + resumen.getTotalRecaudado());
                     }
 
-                    // Comprobar si los tres hilos terminaron.
                     if (!hilo1.isAlive()
                             && !hilo2.isAlive()
                             && !hilo3.isAlive()) {
-
                         timeline.stop();
-
                         if (cancelacionSolicitada) {
                             lblEstado.setText("Cancelado");
-
                         } else if (resumen.getCantidadVentas() == 15) {
                             lblEstado.setText("Completado");
-
                         } else {
                             lblEstado.setText("Error");
                         }
@@ -167,7 +153,6 @@ public class CajaVentasController {
                         btnIniciar.setDisable(false);
                         btnCancelar.setDisable(true);
 
-                        // Cerrar solo cuando terminaron los hilos.
                         if (cerrarPendiente) {
                             btnIniciar.getScene().getWindow().hide();
                         }
@@ -177,7 +162,7 @@ public class CajaVentasController {
 
         timeline.setCycleCount(Timeline.INDEFINITE);
 
-        // Iniciar los tres vendedores.
+
         hilo1.start();
         hilo2.start();
         hilo3.start();
@@ -185,37 +170,24 @@ public class CajaVentasController {
         timeline.play();
     }
 
-    // Trabajo que realiza cada vendedor.
+
     private void procesarVentas(int vendedor) {
 
-        // Cada vendedor realiza cinco ventas.
         for (int i = 1; i <= 5; i++) {
-
             if (Thread.currentThread().isInterrupted()) {
                 return;
             }
-
             try {
-
-                // Simular el tiempo de cada venta.
                 Thread.sleep(500);
-
                 if (Thread.currentThread().isInterrupted()) {
                     return;
                 }
-
-                // Registrar la venta y su avance juntos.
                 synchronized (caja) {
-
                     if (Thread.currentThread().isInterrupted()) {
                         return;
                     }
-
-                    Caja.ResumenVenta resumen =
-                            caja.registrarVenta("Vendedor " + vendedor, 100);
-
+                    Caja.ResumenVenta resumen = caja.registrarVenta("Vendedor " + vendedor, 100);
                     ventasVendedores[vendedor - 1]++;
-
                     mensajes.add(
                             "Vendedor " + vendedor
                                     + " realizó una venta de C$100"
@@ -237,7 +209,6 @@ public class CajaVentasController {
         solicitarCancelacion();
     }
 
-    // Solicitar la interrupción de los vendedores.
     private void solicitarCancelacion() {
 
         if (!ejecutando || cancelacionSolicitada) {
@@ -261,6 +232,5 @@ public class CajaVentasController {
             hilo3.interrupt();
         }
 
-        // Timeline confirmará cuándo terminaron.
     }
 }
