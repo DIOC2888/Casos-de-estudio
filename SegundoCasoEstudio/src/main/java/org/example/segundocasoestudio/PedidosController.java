@@ -103,8 +103,7 @@ public class PedidosController {
             timeline.stop();
         }
 
-        timeline = new Timeline(
-                new KeyFrame(Duration.millis(100), e -> {
+        timeline = new Timeline(new KeyFrame(Duration.millis(100), e -> {
 
                     String mensaje;
                     while ((mensaje = mensajes.poll()) != null) {
@@ -163,21 +162,15 @@ public class PedidosController {
             ConcurrentLinkedQueue<String> mensajes) {
 
         for (int i = 1; i <= 10; i++) {
-
-            // Comprobar si se solicitó una interrupción.
             if (Thread.currentThread().isInterrupted()) {
                 return;
             }
 
-            // Evitar seguir procesando cuando el total
-            // de pedidos ya llegó a 30.
             if (pedido.getContadorPedidos() >= 30) {
                 return;
             }
 
             try {
-
-                // Simular el procesamiento de un pedido.
                 // Cada intento espera 200 milisegundos.
                 Thread.sleep(200);
 
@@ -243,18 +236,13 @@ public class PedidosController {
         // hasta confirmar que los tres finalizaron.
     }
 
-    // Método ejecutado al cerrar la ventana.
     private void cancelarAlCerrar() {
-
-        // Registrar la solicitud de cancelación.
         cancelacionSolicitada = true;
 
-        // Detener las actualizaciones de la interfaz.
         if (timeline != null) {
             timeline.stop();
         }
 
-        // Solicitar la interrupción de los tres agentes.
         if (hilo1 != null && hilo1.isAlive()) {
             hilo1.interrupt();
         }
