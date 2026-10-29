@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e2c290e-0c11-42c1-970a-f7607eae7264" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../PrimerCasoEstudio/src/main/java/org/example/primercasoestudio/PrimerCasoEstudioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PrimerCasoEstudio/src/main/java/org/example/primercasoestudio/PrimerCasoEstudioController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PrimerCasoEstudio/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/segundocasoestudio/HelloApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/segundocasoestudio/HelloController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/segundocasoestudio/Launcher.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TercerCasoEstudio/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../TercerCasoEstudio/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/segundocasoestudio/PedidosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/segundocasoestudio/PedidosController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +90,7 @@
       <option name="presentableId" value="Default" />
       <updated>1793147383745</updated>
       <workItem from="1793230369863" duration="194000" />
-      <workItem from="1793251753361" duration="667000" />
+      <workItem from="1793251753361" duration="1830000" />
     </task>
     <servers />
   </component>
