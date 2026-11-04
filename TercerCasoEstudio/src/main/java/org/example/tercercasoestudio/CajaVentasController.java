@@ -111,81 +111,81 @@ public class CajaVentasController {
             timeline.stop();
         }
 
-        // El Timeline actualiza la interfaz cada 100 milisegundos.
-        // Así podemos mostrar el progreso sin detener los hilos.
+        // El Timeline actualiza la interfaz cada 100 milisegundos
+        // Así podemos mostrar el progreso sin detener los hilos
         timeline = new Timeline(new KeyFrame(Duration.millis(100), e -> {
 
-            // Variable que guardará el total de ventas y dinero.
+            // Variable que guardará el total de ventas y dinero
             Caja.ResumenVenta resumen;
 
-            // Protegemos la lectura de los datos compartidos.
-            // Mientras leemos, ningún vendedor puede modificarlos.
+            // Protegemos la lectura de los datos compartidos
+            // Mientras leemos, ningún vendedor puede modificarlos
             synchronized (caja) {
 
                 String mensaje;
 
                 // Sacamos los mensajes pendientes de la cola
-                // y los mostramos en el registro de ventas.
+                // y los mostramos en el registro de ventas
                 while ((mensaje = mensajes.poll()) != null) {
                     txtRegistro.appendText(mensaje + "\n");
                 }
 
-                // Obtenemos las ventas y la recaudación actual.
+                // Obtenemos las ventas y la recaudación actual
                 resumen = caja.obtenerResumen();
 
-                // Actualizamos la cantidad de ventas de cada vendedor.
+                // Actualizamos la cantidad de ventas de cada vendedor
                 lblVendedor1.setText(ventasVendedores[0] + " / 5");
                 lblVendedor2.setText(ventasVendedores[1] + " / 5");
                 lblVendedor3.setText(ventasVendedores[2] + " / 5");
 
-                // Actualizamos las barras de progreso.
+                // Actualizamos las barras de progreso
                 // Se divide entre 5.0 porque cada vendedor
-                // debe realizar un máximo de cinco ventas.
+                // debe realizar un máximo de cinco ventas
                 barraVendedor1.setProgress(ventasVendedores[0] / 5.0);
                 barraVendedor2.setProgress(ventasVendedores[1] / 5.0);
                 barraVendedor3.setProgress(ventasVendedores[2] / 5.0);
 
-                // Mostramos el total de ventas confirmadas.
+                // Mostramos el total de ventas confirmadas
                 lblTotalVentas.setText("" + resumen.getCantidadVentas());
 
-                // Mostramos el dinero recaudado hasta el momento.
+                // Mostramos el dinero recaudado hasta el momento
                 lblRecaudacion.setText("C$ " + resumen.getTotalRecaudado());
             }
 
-            // Comprobamos si los tres vendedores terminaron.
-            // isAlive() devuelve false cuando el hilo ya no está activo.
+            // Comprobamos si los tres vendedores terminaron
+            // isAlive() devuelve false cuando el hilo ya no está activo
             if (!hilo1.isAlive()
                     && !hilo2.isAlive()
                     && !hilo3.isAlive()) {
 
                 // Detenemos el Timeline porque ya no hay
-                // vendedores trabajando.
+                // vendedores trabajando
                 timeline.stop();
 
-                // Si el usuario canceló, mostramos "Cancelado".
+                // Si el usuario canceló, mostramos "Cancelado"
                 if (cancelacionSolicitada) {
                     lblEstado.setText("Cancelado");
 
-                    // Si se completaron las 15 ventas, fue exitoso.
+                    // Si se completaron las 15 ventas, fue exitoso
                 } else if (resumen.getCantidadVentas() == 15) {
                     lblEstado.setText("Completado");
 
                     // Si los hilos terminaron sin completar las ventas
-                    // y no hubo cancelación, indicamos un error.
+                    // y no hubo cancelación, indicamos un error
                 } else {
                     lblEstado.setText("Error");
                 }
 
-                // Indicamos que ya no hay una simulación activa.
+                // Indicamos que ya no hay una simulación activa
                 ejecutando = false;
 
                 // Permitimos iniciar una nueva simulación
-                // y deshabilitamos el botón de cancelar.
+                // y deshabilitamos el botón de cancelar
                 btnIniciar.setDisable(false);
                 btnCancelar.setDisable(true);
 
-                // Si el usuario había solicitado cerrar la ventana,
-                // la cerramos ahora que los tres hilos terminaron.
+                // Si el usuario había solicitado cerrar la ventana
+                // la cerramos ahora que los tres hilos terminaron
                 if (cerrarPendiente) {
                     btnIniciar.getScene().getWindow().hide();
                 }

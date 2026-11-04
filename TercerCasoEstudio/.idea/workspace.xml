@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd97f271-6712-4741-add7-439907e4f80e" name="Changes" comment="Ajustes a la documentacion de Controller CajaVentas 3">
-      <change beforePath="$PROJECT_DIR$/../PrimerCasoEstudio/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PrimerCasoEstudio/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="fd97f271-6712-4741-add7-439907e4f80e" name="Changes" comment="Ajustes a la documentacion">
       <change beforePath="$PROJECT_DIR$/../SegundoCasoEstudio/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SegundoCasoEstudio/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SegundoCasoEstudio/src/main/java/org/example/segundocasoestudio/PedidosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SegundoCasoEstudio/src/main/java/org/example/segundocasoestudio/PedidosController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/tercercasoestudio/CajaVentasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/tercercasoestudio/CajaVentasController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +101,7 @@
       <workItem from="1793233609239" duration="93000" />
       <workItem from="1793251644031" duration="107000" />
       <workItem from="1793261271051" duration="805000" />
-      <workItem from="1793293520626" duration="1158000" />
+      <workItem from="1793293520626" duration="2712000" />
     </task>
     <task id="LOCAL-00001" summary="Primer commit creacion de fxml, controller y model">
       <option name="closed" value="true" />
@@ -144,7 +143,15 @@
       <option name="project" value="LOCAL" />
       <updated>1793262074426</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Ajustes a la documentacion">
+      <option name="closed" value="true" />
+      <created>1793294889633</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1793294889633</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,6 +163,7 @@
     <MESSAGE value="Se empieaza a trabajar el controller" />
     <MESSAGE value="Controller CajaVentas 3" />
     <MESSAGE value="Ajustes a la documentacion de Controller CajaVentas 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajustes a la documentacion de Controller CajaVentas 3" />
+    <MESSAGE value="Ajustes a la documentacion" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajustes a la documentacion" />
   </component>
 </project>
