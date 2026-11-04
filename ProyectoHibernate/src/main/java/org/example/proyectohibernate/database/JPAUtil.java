@@ -37,4 +37,12 @@ public class JPAUtil {
         }
     }
 
+    public List<Libro> listar(){
+        EntityManager em = getEntityManagerFactory().createEntityManager();
+        try{
+            return em.CreateQuery("SELECT l FROM Libro l", Libro.id).getResultList();
+        }finally
+            em.close();
+    }
+
 }
