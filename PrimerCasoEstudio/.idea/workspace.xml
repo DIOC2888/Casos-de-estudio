@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="bd39410c-20a1-448c-a36a-06d94df51528" name="Changes" comment="Documentaciones">
+      <change beforePath="$PROJECT_DIR$/../SegundoCasoEstudio/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SegundoCasoEstudio/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TercerCasoEstudio/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../TercerCasoEstudio/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TercerCasoEstudio/src/main/java/org/example/tercercasoestudio/CajaVentasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TercerCasoEstudio/src/main/java/org/example/tercercasoestudio/CajaVentasController.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="18" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;DIOC2888&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/DIOC2888/Casos-de-estudio.git&quot;,
+    &quot;accountId&quot;: &quot;110400e4-fe38-4c13-8a73-8f9a57e70d03&quot;
+  }
+}</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3LIhAsS6kvZQQDpek24klrHoJOb" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.PrimerCasoEstudioApplication.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;ml.llm.LLMConfigurable&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.33813.55" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.33813.55" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bd39410c-20a1-448c-a36a-06d94df51528" name="Changes" comment="" />
+      <created>1793147350531</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1793147350531</updated>
+      <workItem from="1793147354717" duration="5630000" />
+      <workItem from="1793153062492" duration="97000" />
+      <workItem from="1793230258241" duration="305000" />
+      <workItem from="1793251823836" duration="3096000" />
+      <workItem from="1793294035449" duration="988000" />
+      <workItem from="1793320305758" duration="29000" />
+    </task>
+    <task id="LOCAL-00001" summary="Creacion del FXML del primer caso de estudio">
+      <option name="closed" value="true" />
+      <created>1793148219647</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1793148219647</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Creacion de controller y modelos">
+      <option name="closed" value="true" />
+      <created>1793148716180</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1793148716180</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Creacion de logica de Main.java, controller y Reserva.java">
+      <option name="closed" value="true" />
+      <created>1793150715728</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1793150715728</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Logica de main se pasa al controller para facilitar la impresion de informacion.">
+      <option name="closed" value="true" />
+      <created>1793153128208</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1793153128208</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Documentaciones">
+      <option name="closed" value="true" />
+      <created>1793260027493</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1793260027493</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Creacion del FXML del primer caso de estudio" />
+    <MESSAGE value="Creacion de controller y modelos" />
+    <MESSAGE value="Creacion de logica de Main.java, controller y Reserva.java" />
+    <MESSAGE value="Logica de main se pasa al controller para facilitar la impresion de informacion." />
+    <MESSAGE value="Documentaciones" />
+    <option name="LAST_COMMIT_MESSAGE" value="Documentaciones" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
