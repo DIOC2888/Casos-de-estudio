@@ -18,16 +18,58 @@ public class Libro {
     private String autor;
 
     @Column(name = "anio_publicacion", nullable = false)
-    private int anioPublicacion;
+    private int anio;
 
     @Column(name = "precio", nullable = false, precision = 10, scale = 2)
     private BigDecimal precio;
 
-    public Libro(long id, String titulo, String autor, int anioPublicacion, BigDecimal precio) {
+    public Libro(long id, String titulo, String autor, int anio, BigDecimal precio) {
         this.id = id;
         this.titulo = titulo;
         this.autor = autor;
-        this.anioPublicacion = anioPublicacion;
+        this.anio = anio;
+        this.precio = precio;
+    }
+
+    public long getId() {
+
+        return id;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public String getAutor() {
+        return autor;
+    }
+
+    public int getAnio() {
+        return anio;
+    }
+
+    public BigDecimal getPrecio() {
+        return precio;
+    }
+
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
+
+    public void setAnio(int anioPublicacion) {
+        this.anio = anioPublicacion;
+    }
+
+    public void setPrecio(BigDecimal precio) {
         this.precio = precio;
     }
 

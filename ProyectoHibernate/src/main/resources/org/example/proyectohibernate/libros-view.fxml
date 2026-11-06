@@ -10,8 +10,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-
-<AnchorPane prefHeight="444.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.proyectohibernate.controller.LibrosController">
+<AnchorPane prefHeight="452.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.proyectohibernate.controller.LibroController">
    <children>
       <Label layoutX="28.0" layoutY="14.0" text="Registro de libros" />
       <GridPane layoutX="28.0" layoutY="42.0" prefHeight="122.0" prefWidth="278.0">
@@ -26,26 +25,29 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <TextField GridPane.columnIndex="1" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="txtTitulo" prefHeight="26.0" prefWidth="171.0" GridPane.columnIndex="1" />
+            <TextField fx:id="txtAutor" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="txtAnio" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="txtPrecio" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <Label text="Precio:" GridPane.rowIndex="3" />
             <Label text="Año:" GridPane.rowIndex="2" />
             <Label text="Autor:" GridPane.rowIndex="1" />
             <Label text="Titulo:" />
          </children>
       </GridPane>
-      <Button layoutX="28.0" layoutY="175.0" mnemonicParsing="false" text="Guardar libro" />
-      <Button layoutX="141.0" layoutY="175.0" mnemonicParsing="false" text="Cargar libros" />
-      <TableView layoutX="22.0" layoutY="222.0" prefHeight="200.0" prefWidth="566.0">
+      <Button fx:id="btnGuardar" layoutX="22.0" layoutY="175.0" mnemonicParsing="false" onAction="#clickGuardar" text="Guardar libro" />
+      <Button fx:id="btnCargar" layoutX="459.0" layoutY="422.0" mnemonicParsing="false" onAction="#clickCargar" text="Cargar libros" />
+      <TableView fx:id="tblTabla" layoutX="22.0" layoutY="222.0" prefHeight="200.0" prefWidth="566.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="ID" />
-          <TableColumn prefWidth="119.20001220703125" text="Titulo" />
-            <TableColumn prefWidth="188.79998779296875" text="Autor" />
-            <TableColumn prefWidth="87.20001220703125" text="Año" />
-            <TableColumn prefWidth="95.2000732421875" text="Precio" />
+          <TableColumn fx:id="colId" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="colTitulo" prefWidth="119.20001220703125" text="Titulo" />
+            <TableColumn fx:id="colAutor" prefWidth="188.79998779296875" text="Autor" />
+            <TableColumn fx:id="colAnio" prefWidth="87.20001220703125" text="Año" />
+            <TableColumn fx:id="colPrecio" prefWidth="95.2000732421875" text="Precio" />
         </columns>
       </TableView>
+      <Button fx:id="btnModificar" layoutX="440.0" layoutY="188.0" mnemonicParsing="false" onAction="#clickModificar" text="Modificar" />
+      <Button fx:id="btnLimpiar" layoutX="130.0" layoutY="175.0" mnemonicParsing="false" onAction="#clickLimpiar" text="Limpiar campos" />
+      <Button fx:id="btnEliminar" layoutX="524.0" layoutY="188.0" mnemonicParsing="false" onAction="#clickEliminar" text="Eliminar" />
    </children>
 </AnchorPane>

@@ -1,6 +1,6 @@
+
 package org.example.proyectohibernate.database;
 
-import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
 
@@ -8,36 +8,40 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class JPAUtil {
+
     private static EntityManagerFactory entityManagerFactory;
 
     public static synchronized void iniciar() {
-        String password = null;
         if (entityManagerFactory == null) {
-            password = System.getenv("DB_PASSWORD");
+            String password = System.getenv("DB_PASSWORD");
+
             if (password == null || password.isEmpty()) {
-                throw new RuntimeException("DB_PASSWORD environment variable is not set or empty.");
+                throw new RuntimeException(
+                        "DB_PASSWORD environment variable is not set or empty."
+                );
             }
 
+            Map<String, String> properties = new HashMap<>();
+            properties.put("jakarta.persistence.jdbc.password", password);
+
+            entityManagerFactory =
+                    Persistence.createEntityManagerFactory(
+                            "bibliotecaPU", properties
+                    );
         }
-        Map<String, String> properties = new HashMap<>();
-        properties.put("jakarta.persistence.jdbc.password", password);
-        entityManagerFactory = Persistence.createEntityManagerFactory
-                ("bibliotecaPU", properties);
-
     }
 
-    public static EntityManagerFactory getEntityManagerFactory() {
+    public static EntityManagerFactory getEntityManager() {
         iniciar();
-        return entityManagerFactory.createEntityManager().getEntityManagerFactory();
+        return entityManagerFactory;
     }
 
-    public static synchronized void cerrar(){
-        if(entityManagerFactory != null && entityManagerFactory.isOpen()){
+    public static synchronized void cerrar() {
+        if (entityManagerFactory != null &&
+                entityManagerFactory.isOpen()) {
+
             entityManagerFactory.close();
             entityManagerFactory = null;
         }
     }
-
-
-
 }
