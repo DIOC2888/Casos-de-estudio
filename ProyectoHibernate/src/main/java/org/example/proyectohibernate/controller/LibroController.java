@@ -1,10 +1,12 @@
 package org.example.proyectohibernate.controller;
 
+import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import org.example.proyectohibernate.dao.LibroDAO;
+import org.example.proyectohibernate.model.Categoria;
 import org.example.proyectohibernate.model.Libro;
 
 import java.math.BigDecimal;
@@ -20,6 +22,8 @@ public class LibroController {
     private TextField txtAnio;
     @FXML
     private TextField txtPrecio;
+    @FXML
+    private ComboBox<Categoria> cmbCategoria;
     @FXML
     private Button btnModificar;
     @FXML
@@ -39,6 +43,8 @@ public class LibroController {
     private TableColumn<Libro, String> colAnio;
     @FXML
     private TableColumn<Libro, Double> colPrecio;
+    @FXML
+    private TableColumn<Libro, String> colCategoria;
 
     private final LibroDAO libroDAO = new LibroDAO();
 
@@ -46,11 +52,25 @@ public class LibroController {
 
 
     public void initialize() {
+
         colId.setCellValueFactory(new PropertyValueFactory<>("id"));
         colTitulo.setCellValueFactory(new PropertyValueFactory<>("titulo"));
         colAutor.setCellValueFactory(new PropertyValueFactory<>("autor"));
         colAnio.setCellValueFactory(new PropertyValueFactory<>("anio"));
         colPrecio.setCellValueFactory(new PropertyValueFactory<>("precio"));
+        // Obtiene la categoría asociada a cada libro y muestra su nombre en la tabla
+        colCategoria.setCellValueFactory(data -> {
+            Categoria categoria = data.getValue().getCategoria();
+
+            // Si el libro no tiene categoría, muestra "Sin categoría"
+            String nombre = categoria != null
+                    ? categoria.getNombre()
+                    : "Sin categoría";
+
+            return new SimpleStringProperty(nombre);
+        });
+
+
         tblTabla.getSelectionModel().selectedItemProperty().addListener((
                 obs, oldValue, newValue) -> {
             if (newValue != null) {
@@ -61,8 +81,21 @@ public class LibroController {
             }
         });
         actualizarBotones();
+
+        cargarCategorias();
         clickCargar();
     }
+
+    private void cargarCategorias() {
+        try {
+            List<Categoria> categorias = new org.example.proyectohibernate.dao.CategoriaDAO().ListarCategorias();
+            cmbCategoria.setItems(FXCollections.observableArrayList(categorias));
+        } catch (Exception e) {
+            e.printStackTrace();
+
+        }
+    }
+
 
 
     private void selectLibro(Libro libro) {
@@ -71,6 +104,7 @@ public class LibroController {
         txtAutor.setText(libro.getAutor());
         txtAnio.setText(String.valueOf(libro.getAnio()));
         txtPrecio.setText(String.valueOf(libro.getPrecio()));
+        cmbCategoria.setValue(libro.getCategoria());
         actualizarBotones();
     }
 
@@ -80,13 +114,21 @@ public class LibroController {
         btnGuardar.setDisable(!sinSeleccio);
     }
 
+
     private Libro obtenerLibro() {
         String titulo = txtTitulo.getText();
         String autor = txtAutor.getText();
         int anio = Integer.valueOf(txtAnio.getText());
-        BigDecimal precio = BigDecimal.valueOf(Double.valueOf(txtPrecio.getText()));
-        return new Libro(0, titulo, autor, anio, precio);
+        BigDecimal precio = BigDecimal.valueOf(
+                Double.valueOf(txtPrecio.getText())
+        );
+
+        Libro libro = new Libro(0, titulo, autor, anio, precio);
+        libro.setCategoria(cmbCategoria.getValue());
+
+        return libro;
     }
+
     @FXML
     private void clickGuardar() {
        try{
@@ -165,8 +207,18 @@ public class LibroController {
         txtAutor.clear();
         txtAnio.clear();
         txtPrecio.clear();
+        cmbCategoria.getSelectionModel().clearSelection();
+
 
         actualizarBotones();
 
+    }
+
+    public TableColumn<Libro, String> getColCategoria() {
+        return colCategoria;
+    }
+
+    public void setColCategoria(TableColumn<Libro, String> colCategoria) {
+        this.colCategoria = colCategoria;
     }
 }

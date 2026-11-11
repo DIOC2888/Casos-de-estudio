@@ -5,6 +5,7 @@
                       transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <class>org.example.proyectohibernate.model.Libro</class>
+        <class>org.example.proyectohibernate.model.Categoria</class>
         <properties>
             <!--PosgreSQL-->
             <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver"/>

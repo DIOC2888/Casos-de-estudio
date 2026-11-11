@@ -11,7 +11,7 @@ public class BibliotecaApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(BibliotecaApplication.class.getResource("/org/example/proyectohibernate/libros-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+        Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Biblioteca");
         stage.setScene(scene);
         stage.show();
